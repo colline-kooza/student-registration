@@ -14,14 +14,14 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Icons } from "../Icons"
 
-export function DashBoardLinks({components}:any) {
+export function DashBoardLinks({components }:any) {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {
-        components.map((comp:any)=>{
+        components.map((comp:any )=>{
         return(
-        <NavigationMenuItem>
+        <NavigationMenuItem key={comp.href}>
           <Link href={comp.href} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {comp.title}
